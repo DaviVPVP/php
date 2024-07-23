@@ -1,67 +1,59 @@
-<?php
-    $num1 = 0;
-    $num2 = 3;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1> Cálculos </h1>
+    <form method="POST">
+        <?php
+            include 'funcoes.php';//Conectando com o arquivo de funções
+        ?>
 
-    function somar($num1, $num2){
-        return $num1 + $num2;
-    }//fim do somar
+        <label>Primeiro número: </label>
+        <input type="number" id="num1" name="num1"/><br><br>
 
-    function subtrair($num1, $num2){
-        return $num1 - $num2;
-    }//fim do subtrair
+        <label>Segundo número: </label>
+        <input type="number" id="num2" name="num2"/><br><br>
 
-    function multiplicar($num1, $num2){
-        return $num1 * $num2;
-    }//fim do multiplicar
+        <label>Terceiro número: </label>
+        <input type="number" id="num3" name="num3"/><br><br>
 
-    function dividir($num1, $num2){
-        if($num2 <= 0){
-            return "Impossivel dividir por zero!";
-        }else{
-            return $num1 / $num2;
-        }
-    }//fim do dividir
+        <button> Calcular
+            <?php
+                $num1 = $_POST['num1'];
+                $num2 = $_POST['num2'];
+                $num3 = $_POST['num3'];
+            ?>
+        </button><br><br>
 
-    function escolher($num1){
-        switch($num1){
-            case 1:
-                return "Rosa";
-                break;
-            case 2: 
-                return "Preto";
-                break;
-            case 3:
-                return "White";
-                break;
-            default:
-                return "Cor não identificada";
-                break;
-        }//fim do switch
-    }//fim do escolher
-
-    function binario($decimal){
-        $binario = "";
-        while($decimal >= 1){
-            $binario .= $decimal % 2;
-            $decimal = $decimal / 2;
-        }
-
-        return strrev($binario);
-    }//fim da conversão
-
-    function reverse($binario){
-        $decimal = "";
-        while($binario)
-    }
-
-    //Imprimir os dados na tela
-    echo "<br>A soma dos números é: ".somar(5,6);
-    echo "<br>A subtração dos números é: ".subtrair(5,6);
-    echo "<br>A multiplicação dos números é: ".multiplicar(5,6);
-    echo "<br>A divisão dos números é: ".dividir(6,7);
-    echo "<br>A escolha é: ".escolher(2);
-    echo "<br>O valor em binário é: ".binario(250);
-    echo "<br>O valor em decimal é: ".reverse(1100;)
+        <textArea rows="100" cols="40" readOnly>
+            <?php
+                echo "\nSomar: ".somar($num1,$num2).
+                "\nSubtrair: ".subtrair($num1,$num2).
+                "\nDividir: ".dividir($num1,$num2).
+                "\nMultiplicar: ".multiplicar($num1,$num2).
+                "\nEscolher: ".escolher($num1).
+                "\nDecimal -> Binário: ".converterBinario($num1).
+                "\nDecimal -> Binário: ".converterBinario($num2).
+                "\nDecimal -> Hexadecimal: ".converterDecimalHexa($num1).
+                "\nDecimal -> Hexadecimal: ".converterDecimalHexa($num2).
+                "\nPar ou impar: ".impar($num1).
+                "\nMaior ou menor: ".maiormenor($num1).
+                "\nDuplicar: ".duplicar($num1).
+                "\nC -> F: ".celsius($num1,$num2).
+                "\nMaior dos Três: ".maiordeTres($num1,$num2,$num3).
+                "\nMaior dos Três: ".positivionegativozero($num1).
+                "\nTabuada: ".tabuada($num1);
 
 
-?>
+
+
+            ?>
+        </textArea>
+    </form>
+</body>
+</html>
