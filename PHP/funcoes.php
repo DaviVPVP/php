@@ -179,14 +179,77 @@
     }
     }
  
-    function tabuada($num1){
-        $num2 = $num1 * 1 && $num2 = $num1 * 2 && $num2 = $num1 * 3;
-    }//fim da tabuada
+    function tabuada($num1,$num2,$num3){
+        $tabuada = '';
+        for ($num2 = 1; $num2 <= 10; $num2++) {
+            $num3 = $num1 * $num2;
+            $tabuada .= "$num1 x $num2 = $num3 ";
+        }
+        return $tabuada;
+    }
+
+    function newsoma($num1){
+        $num2 = 0;
+        for ($num3 = 1; $num3 <= $num1; $num3++){
+            $num2 += $num3;
+        }
+        return $num2;
+    }
+    
+    function primo($num1){
+        if ($num1 <= 1){
+            return "Não primo!";
+        }
+        if ($num1 == 2 || $num1 == 3 || $num1 == 5 || $num1 == 7){
+            return "Primo!";
+        }
+        if ($num1 % 2 == 0 || $num1 % 3 == 0 || $num1 % 5 == 0 || $num1 % 7 == 0){
+            return "Não primo!";
+        }
+    }
+
+    function fatorial($num1){
+        $num3 = 1;
+        for ($num2 = 1; $num2 <= $num1; $num2++){
+            $num3 *= $num2;
+        }
+        return $num3;
+    }
+
+
+    
+
+    
+
+    
+
+
+    
+
+    
+    
+    
+    
+
 
 
 
 
     
+
+
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
 
     /*
     //Imprimir dos dados na tela

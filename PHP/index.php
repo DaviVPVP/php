@@ -47,7 +47,17 @@
                 "\nC -> F: ".celsius($num1,$num2).
                 "\nMaior dos Três: ".maiordeTres($num1,$num2,$num3).
                 "\nMaior dos Três: ".positivionegativozero($num1).
-                "\nTabuada: ".tabuada($num1);
+                "\nTabuada: ".tabuada($num1,$num2,$num3).
+                "\nSoma de um até determinado número: ".newsoma($num1,$num2,$num3).
+                "\nPrimo ou Não primo: ".primo($num1).
+                "\nFatorial: ".fatorial($num1);
+
+
+
+   
+
+;
+
 
 
 
