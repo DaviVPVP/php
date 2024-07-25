@@ -22,11 +22,28 @@
         <label>Terceiro número: </label>
         <input type="number" id="num3" name="num3"/><br><br>
 
+        <label>Quarto número: </label>
+        <input type="number" id="num4" name="num4"/><br><br>
+
+        <label>Quinto número: </label>
+        <input type="number" id="num5" name="num5"/><br><br>
+
+        <label>Digite uma palavra: </label>
+        <input type="string" id="string" name="string"/><br><br>
+
+        <label>Digite uma palavra: </label>
+        <input type="palavra" id="palavra" name="palavra"/><br><br>
+
+
         <button> Calcular
             <?php
                 $num1 = $_POST['num1'];
                 $num2 = $_POST['num2'];
                 $num3 = $_POST['num3'];
+                $num4 = $_POST['num4'];
+                $num5 = $_POST['num5'];
+                $string = $_POST['string'];
+                $palavra = $_POST['palavra'];
             ?>
         </button><br><br>
 
@@ -50,11 +67,13 @@
                 "\nTabuada: ".tabuada($num1,$num2,$num3).
                 "\nSoma de um até determinado número: ".newsoma($num1,$num2,$num3).
                 "\nPrimo ou Não primo: ".primo($num1).
-                "\nFatorial: ".fatorial($num1);
-
-
-
-   
+                "\nPalíndrome: ".palindrome($string).
+                "\nFatorial: ".fatorial($num1).
+                "\nPares até determinado número: ".pares($num1).
+                "\nQuantidade de vogais: ".vogais($palavra).
+                "\nData: ".data($num1,$num2,$num3).
+                "\nMédia: ".mediaCinco($num1,$num2,$num3,$num4,$num5).
+                "\nDivisores: ".divisores($num1);
 
 ;
 
